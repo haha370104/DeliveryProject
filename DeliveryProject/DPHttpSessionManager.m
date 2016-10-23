@@ -36,7 +36,7 @@
 #pragma mark - public -
 
 - (void)getRequestByUrl:(NSString *)url params:(NSDictionary *)params success:( void (^) (NSURLSessionDataTask *task, id data) )success
-                failure:( void (^) (NSURLSessionDataTask *task, NSString *errorReason) )failure
+                failure:( void (^) (NSURLSessionDataTask *task, NSDictionary *error) )failure
 {
     MBProgressHUD *loadingView = [MBProgressHUD showLoadingState:@"加载中..." inView:nil inBackground:NO];
     __weak typeof(loadingView) weadHud = loadingView;
@@ -51,8 +51,8 @@
         if (failure) {
             NSData* responseData = (NSData *)error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey];
             NSDictionary *dictionary =[NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableLeaves error:nil];
-            if (dictionary && [dictionary objectForKey:@"error"]) {
-                failure(task, [dictionary objectForKey:@"error"]);
+            if (dictionary) {
+                failure(task, dictionary);
             } else {
                 [MBProgressHUD showErrorState:@"网络错误" inView:nil];
             }
@@ -63,7 +63,7 @@
 }
 
 - (void)postRequestByUrl:(NSString *)url params:(NSDictionary *)params success:( void (^) (NSURLSessionDataTask *task, id data) )success
-                 failure:( void (^) (NSURLSessionDataTask *task, NSString *errorReason) )failure
+                 failure:( void (^) (NSURLSessionDataTask *task, NSDictionary *error) )failure
 {
     MBProgressHUD *loadingView = [MBProgressHUD showLoadingState:@"加载中..." inView:nil inBackground:NO];
     __weak typeof(loadingView) weadHud = loadingView;
@@ -78,8 +78,8 @@
         if (failure) {
             NSData* responseData = (NSData *)error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey];
             NSDictionary *dictionary =[NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableLeaves error:nil];
-            if (dictionary && [dictionary objectForKey:@"error"]) {
-                failure(task, [dictionary objectForKey:@"error"]);
+            if (dictionary) {
+                failure(task, dictionary);
             } else {
                 [MBProgressHUD showErrorState:@"网络错误" inView:nil];
             }

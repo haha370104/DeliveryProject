@@ -16,9 +16,10 @@
 		75AA79E11DBC8E670029A3F6 /* DPActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AA79E01DBC8E670029A3F6 /* DPActivityIndicatorView.m */; };
 		75AA79E41DBC90410029A3F6 /* DPApiUrls.h in Sources */ = {isa = PBXBuildFile; fileRef = 75AA79E31DBC90410029A3F6 /* DPApiUrls.h */; };
 		75AA79E71DBC9BA60029A3F6 /* DPUserApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AA79E61DBC9BA60029A3F6 /* DPUserApi.m */; };
+		75AA79EA1DBCBAD60029A3F6 /* NSObject+DPTypeCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AA79E91DBCBAD60029A3F6 /* NSObject+DPTypeCheck.m */; };
+		75AA79ED1DBCBB840029A3F6 /* NSObject+DPOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AA79EC1DBCBB840029A3F6 /* NSObject+DPOperation.m */; };
 		75DE08F01DBB9A0A000F4208 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DE08EF1DBB9A0A000F4208 /* main.m */; };
 		75DE08F31DBB9A0A000F4208 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DE08F21DBB9A0A000F4208 /* AppDelegate.m */; };
-		75DE08F61DBB9A0A000F4208 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DE08F51DBB9A0A000F4208 /* ViewController.m */; };
 		75DE08FB1DBB9A0A000F4208 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75DE08FA1DBB9A0A000F4208 /* Assets.xcassets */; };
 		75DE09091DBB9A0A000F4208 /* DeliveryProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DE09081DBB9A0A000F4208 /* DeliveryProjectTests.m */; };
 		75DE09141DBB9A0A000F4208 /* DeliveryProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DE09131DBB9A0A000F4208 /* DeliveryProjectUITests.m */; };
@@ -64,12 +65,14 @@
 		75AA79E31DBC90410029A3F6 /* DPApiUrls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPApiUrls.h; sourceTree = "<group>"; };
 		75AA79E51DBC9BA60029A3F6 /* DPUserApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPUserApi.h; sourceTree = "<group>"; };
 		75AA79E61DBC9BA60029A3F6 /* DPUserApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPUserApi.m; sourceTree = "<group>"; };
+		75AA79E81DBCBAD60029A3F6 /* NSObject+DPTypeCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DPTypeCheck.h"; sourceTree = "<group>"; };
+		75AA79E91DBCBAD60029A3F6 /* NSObject+DPTypeCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DPTypeCheck.m"; sourceTree = "<group>"; };
+		75AA79EB1DBCBB840029A3F6 /* NSObject+DPOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DPOperation.h"; sourceTree = "<group>"; };
+		75AA79EC1DBCBB840029A3F6 /* NSObject+DPOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DPOperation.m"; sourceTree = "<group>"; };
 		75DE08EB1DBB9A0A000F4208 /* DeliveryProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeliveryProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75DE08EF1DBB9A0A000F4208 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		75DE08F11DBB9A0A000F4208 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		75DE08F21DBB9A0A000F4208 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		75DE08F41DBB9A0A000F4208 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		75DE08F51DBB9A0A000F4208 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		75DE08FA1DBB9A0A000F4208 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75DE08FF1DBB9A0A000F4208 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75DE09041DBB9A0A000F4208 /* DeliveryProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeliveryProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -260,8 +263,6 @@
 			isa = PBXGroup;
 			children = (
 				756C859D1DBBA3DD0063B81F /* Login */,
-				75DE08F41DBB9A0A000F4208 /* ViewController.h */,
-				75DE08F51DBB9A0A000F4208 /* ViewController.m */,
 				75DE09251DBB9F9A000F4208 /* DPUserInfoViewController.h */,
 				75DE09261DBB9F9A000F4208 /* DPUserInfoViewController.m */,
 				75DE09211DBB9D0E000F4208 /* DPTabBarController.h */,
@@ -281,6 +282,10 @@
 				75FB1C481DBC478B00485854 /* UIFont+DPTheme.m */,
 				75AA79D91DBC8D550029A3F6 /* MBProgressHUD+DPProgressHUD.h */,
 				75AA79DA1DBC8D550029A3F6 /* MBProgressHUD+DPProgressHUD.m */,
+				75AA79E81DBCBAD60029A3F6 /* NSObject+DPTypeCheck.h */,
+				75AA79E91DBCBAD60029A3F6 /* NSObject+DPTypeCheck.m */,
+				75AA79EB1DBCBB840029A3F6 /* NSObject+DPOperation.h */,
+				75AA79EC1DBCBB840029A3F6 /* NSObject+DPOperation.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -475,11 +480,12 @@
 				75DE09271DBB9F9A000F4208 /* DPUserInfoViewController.m in Sources */,
 				75AA79E71DBC9BA60029A3F6 /* DPUserApi.m in Sources */,
 				75AA79E11DBC8E670029A3F6 /* DPActivityIndicatorView.m in Sources */,
-				75DE08F61DBB9A0A000F4208 /* ViewController.m in Sources */,
 				75DE08F31DBB9A0A000F4208 /* AppDelegate.m in Sources */,
 				75AA79DE1DBC8E030029A3F6 /* UIWindow+MainWindow.m in Sources */,
+				75AA79EA1DBCBAD60029A3F6 /* NSObject+DPTypeCheck.m in Sources */,
 				75DE09231DBB9D0E000F4208 /* DPTabBarController.m in Sources */,
 				756C85971DBBA0720063B81F /* DPUser.m in Sources */,
+				75AA79ED1DBCBB840029A3F6 /* NSObject+DPOperation.m in Sources */,
 				756C85A11DBBA4D20063B81F /* DPLeftTitleRightTextFieldTableViewCell.m in Sources */,
 				75DE08F01DBB9A0A000F4208 /* main.m in Sources */,
 				75FB1C4A1DBC478B00485854 /* UIFont+DPTheme.m in Sources */,
@@ -643,6 +649,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = LE7UV7A4JD;
 				INFOPLIST_FILE = DeliveryProjectTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.tongji.DeliveryProjectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -656,6 +663,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = LE7UV7A4JD;
 				INFOPLIST_FILE = DeliveryProjectTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.tongji.DeliveryProjectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -668,6 +676,7 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = LE7UV7A4JD;
 				INFOPLIST_FILE = DeliveryProjectUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.tongji.DeliveryProjectUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -680,6 +689,7 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = LE7UV7A4JD;
 				INFOPLIST_FILE = DeliveryProjectUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.tongji.DeliveryProjectUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -7,8 +7,9 @@
 //
 
 #import "DPTabBarController.h"
-
 #import "DPLoginController.h"
+
+#import "DPUserApi.h"
 
 @interface DPTabBarController ()
 
@@ -25,10 +26,14 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-    DPLoginController *loginController = [[DPLoginController alloc] init];
-    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:loginController];
-    [self presentViewController:navi animated:YES completion:nil];
+
+    [DPUserApi checkIfLoginWithLoginAction:^(NSDictionary *response) {
+        NSLog(@"已登录");
+    } notLoginAction:^(NSDictionary *response) {
+        DPLoginController *loginController = [[DPLoginController alloc] init];
+        UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:loginController];
+        [self presentViewController:navi animated:YES completion:nil];
+    }];
 }
 
 @end

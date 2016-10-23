@@ -11,6 +11,7 @@
 #import "DPApiUrls.h"
 
 #import "MBProgressHUD+DPProgressHUD.h"
+#import "NSObject+DPTypeCheck.h"
 
 @implementation DPUserApi
 
@@ -31,8 +32,8 @@
     [[DPHttpSessionManager shareManager] postRequestByUrl:kDPAPI_LOGIN_URL params:@{@"mobile":phoneNum, @"password":password} success:^(NSURLSessionDataTask *task, id data) {
         NSAssert([data isKindOfClass:[NSDictionary class]],@"response is not kind of dictionary");
         complete(data);
-    } failure:^(NSURLSessionDataTask *task, NSString *errorReason) {
-        [MBProgressHUD showErrorState:errorReason inView:nil];
+    } failure:^(NSURLSessionDataTask *task, NSDictionary *error) {
+        [MBProgressHUD showErrorState:[error stringValueForKey:@"error"] inView:nil];
     }];
 }
 
@@ -41,9 +42,13 @@
     
 }
 
-+ (void)checkIfLoginWithComplete:( void (^) (NSDictionary *response) )complete
++ (void)checkIfLoginWithLoginAction:( void (^) (NSDictionary *response) )loginAction notLoginAction:( void (^) (NSDictionary *response) )notLoginAction
 {
-
+    [[DPHttpSessionManager shareManager] getRequestByUrl:kDPAPI_CHECK_LOGIN_URL params:nil success:^(NSURLSessionDataTask *task, id data) {
+        loginAction(data);
+    } failure:^(NSURLSessionDataTask *task, NSDictionary *error) {
+        notLoginAction(error);
+    }];
 }
 
 @end

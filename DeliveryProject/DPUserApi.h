@@ -18,6 +18,6 @@
 
 + (void)logoutWithComplete:( void (^) (NSDictionary *response) )complete;
 
-+ (void)checkIfLoginWithComplete:( void (^) (NSDictionary *response) )complete;
++ (void)checkIfLoginWithLoginAction:( void (^) (NSDictionary *response) )loginAction notLoginAction:( void (^) (NSDictionary *response) )notLoginAction;
 
 @end

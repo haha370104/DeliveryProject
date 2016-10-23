@@ -16,7 +16,7 @@
 #define kDPAPI_REGISTER_URL @"/api/user/signup"
 #define kDPAPI_LOGIN_URL @"/api/user/login"
 #define kDPAPI_LOGOUT_URL @"/api/user/logout"
-#define kDPAPI_CHECK_LOGIN_URL @"/api/user/test"
+#define kDPAPI_CHECK_LOGIN_URL @"/api/user/info"
 
 #pragma mark - 包裹相关 -
 
