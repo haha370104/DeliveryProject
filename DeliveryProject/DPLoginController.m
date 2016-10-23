@@ -8,6 +8,9 @@
 
 #import "DPLoginController.h"
 #import "DPLeftTitleRightTextFieldTableViewCell.h"
+
+#import "DPRegisterController.h"
+
 #import "DPUserApi.h"
 
 #import "UIColor+DPTheme.h"
@@ -58,6 +61,8 @@
 
 - (void)setupNavigationBar
 {
+    self.navigationController.title = @"登录";
+
     UIBarButtonItem *registerItem = [[UIBarButtonItem alloc] initWithTitle:@"注册" style:UIBarButtonItemStylePlain target:self action:@selector(registerAction:)];
     [registerItem setTitleTextAttributes:@{ NSForegroundColorAttributeName : [UIColor dp_blueColor] } forState:UIControlStateNormal];
     self.navigationItem.rightBarButtonItem = registerItem;
@@ -78,7 +83,7 @@
 
 - (void)registerAction:(UIButton *) sender
 {
-    return;
+    [self.navigationController pushViewController:[[DPRegisterController alloc] init] animated:YES];
 }
 
 - (void)loginButtonClick:(UIButton *)sender
@@ -94,11 +99,6 @@
         [MBProgressHUD showSuccessState:@"登陆成功" inView:nil];
         [self dismissViewControllerAnimated:YES completion:nil];
     }];
-}
-
-- (void)forgetPwdAction:(UIButton *)sender
-{
-
 }
 
 #pragma mark - DPLeftTitleRightTextFieldCellDelegate -
@@ -140,25 +140,6 @@
         make.left.top.equalTo(footerView).with.offset(15);
         make.right.equalTo(footerView).with.offset(-15);
         make.height.equalTo(@44);
-    }];
-
-    UIButton *button = [[UIButton alloc] init];
-    NSAttributedString *title = [[NSAttributedString alloc] initWithString:@"忘记密码？点击找回" attributes:@{
-                                                                                                     NSUnderlineStyleAttributeName : @(NSUnderlineStyleSingle),
-                                                                                                     NSForegroundColorAttributeName : [UIColor dp_darkGrayColor]
-                                                                                                     }];
-    [button setAttributedTitle:title forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor dp_darkGrayColor] forState:UIControlStateNormal];
-    button.titleLabel.font = [UIFont dp_systemFontOfSize:14];
-    button.layer.cornerRadius = 5;
-    button.clipsToBounds = YES;
-    [button addTarget:self action:@selector(forgetPwdAction:) forControlEvents:UIControlEventTouchUpInside];
-    [footerView addSubview:button];
-    [button mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(loginButton.mas_bottom).with.offset(10);
-        make.bottom.equalTo(footerView).with.offset(-10);
-        make.centerX.equalTo(footerView);
-        make.width.equalTo(@180);
     }];
     
     return footerView;
