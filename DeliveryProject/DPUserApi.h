@@ -16,7 +16,7 @@
 
 + (void)loginWithphoneNum:(NSString *)phoneNum password:(NSString *)password complete:( void (^) (NSDictionary *response) )complete;
 
-+ (void)logoutWithComplete:( void (^) (NSDictionary *response) )complete;
++ (void)logoutWithComplete:( void (^) (NSDictionary *response, BOOL success) )complete;
 
 + (void)checkIfLoginWithLoginAction:( void (^) (NSDictionary *response) )loginAction notLoginAction:( void (^) (NSDictionary *response) )notLoginAction;
 

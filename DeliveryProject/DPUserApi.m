@@ -9,6 +9,7 @@
 #import "DPUserApi.h"
 #import "DPHttpSessionManager.h"
 #import "DPApiUrls.h"
+#import "DPUserManager.h"
 
 #import "MBProgressHUD+DPProgressHUD.h"
 #import "NSObject+DPTypeCheck.h"
@@ -51,14 +52,22 @@
     }];
 }
 
-+ (void)logoutWithComplete:( void (^) (NSDictionary *response) )complete
++ (void)logoutWithComplete:( void (^) (NSDictionary *response, BOOL success) )complete
 {
-    
+    [[DPHttpSessionManager shareManager] getRequestByUrl:kDPAPI_LOGOUT_URL params:nil success:^(NSURLSessionDataTask *task, id data) {
+        if (complete) {
+            complete(data, YES);
+        }
+    } failure:^(NSURLSessionDataTask *task, NSDictionary *error) {
+        complete(error, NO);
+    }];
 }
 
 + (void)checkIfLoginWithLoginAction:( void (^) (NSDictionary *response) )loginAction notLoginAction:( void (^) (NSDictionary *response) )notLoginAction
 {
     [[DPHttpSessionManager shareManager] getRequestByUrl:kDPAPI_CHECK_LOGIN_URL params:nil success:^(NSURLSessionDataTask *task, id data) {
+        NSDictionary *result = [data dictionaryValueForKey:@"result"];
+        [[DPUserManager shareManager] setupWithPhoneNum:[result stringValueForKey:@"mobile"] userName:[result stringValueForKey:@"name"]];
         loginAction(data);
     } failure:^(NSURLSessionDataTask *task, NSDictionary *error) {
         notLoginAction(error);
