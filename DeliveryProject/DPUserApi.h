@@ -10,9 +10,9 @@
 
 @interface DPUserApi : NSObject
 
-+ (void)getSMSCode:(NSString *)phoneNum  complete:( void (^) (NSDictionary *response) )complete;
++ (void)getSMSCode:(NSString *)phoneNum  complete:( void (^) (NSDictionary *response, BOOL success) )complete;
 
-+ (void)registerWithPhoneNum:(NSString *)phoneNum smsCode:(NSString *)smsCode password:(NSString *)password name:(NSString *)name complete:( void (^) (NSDictionary *response) )complete;
++ (void)registerWithPhoneNum:(NSString *)phoneNum smsCode:(NSString *)smsCode password:(NSString *)password name:(NSString *)name complete:( void (^) (NSDictionary *response, BOOL success) )complete;
 
 + (void)loginWithphoneNum:(NSString *)phoneNum password:(NSString *)password complete:( void (^) (NSDictionary *response) )complete;
 

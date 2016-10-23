@@ -15,16 +15,30 @@
 
 @implementation DPUserApi
 
-+ (void)getSMSCode:(NSString *)phoneNum  complete:( void (^) (NSDictionary *response) )complete
++ (void)getSMSCode:(NSString *)phoneNum  complete:( void (^) (NSDictionary *response, BOOL success) )complete
 {
     [[DPHttpSessionManager shareManager] getRequestByUrl:kDPAPI_GET_SMS_CODE_URL params:@{@"mobile":phoneNum} success:^(NSURLSessionDataTask *task, id data) {
-        complete(data);
-    } failure:nil];
+        if (complete) {
+            complete(data, YES);
+        }
+    } failure:^(NSURLSessionDataTask *task, NSDictionary *error) {
+        if (complete) {
+            complete(error, NO);
+        }
+    }];
 }
 
-+ (void)registerWithPhoneNum:(NSString *)phoneNum smsCode:(NSString *)smsCode password:(NSString *)password name:(NSString *)name complete:( void (^) (NSDictionary *response) )complete
++ (void)registerWithPhoneNum:(NSString *)phoneNum smsCode:(NSString *)smsCode password:(NSString *)password name:(NSString *)name complete:( void (^) (NSDictionary *response, BOOL success) )complete
 {
-    
+    [[DPHttpSessionManager shareManager] postRequestByUrl:kDPAPI_REGISTER_URL params:@{@"mobile":phoneNum, @"smsCode":smsCode, @"password":password, @"name":name} success:^(NSURLSessionDataTask *task, id data) {
+        if (complete) {
+            complete(data, YES);
+        }
+    } failure:^(NSURLSessionDataTask *task, NSDictionary *error) {
+        if (complete) {
+            complete(error, NO);
+        }
+    }];
 }
 
 + (void)loginWithphoneNum:(NSString *)phoneNum password:(NSString *)password complete:( void (^) (NSDictionary *response) )complete
