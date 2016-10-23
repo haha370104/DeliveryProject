@@ -52,6 +52,14 @@
     return self;
 }
 
+#pragma mark - lifecycle -
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    self.navigationItem.title = @"注册";
+}
+
 #pragma mark - UITableViewDataSource -
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

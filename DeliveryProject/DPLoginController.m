@@ -61,7 +61,7 @@
 
 - (void)setupNavigationBar
 {
-    self.navigationController.title = @"登录";
+    self.navigationItem.title = @"登录";
 
     UIBarButtonItem *registerItem = [[UIBarButtonItem alloc] initWithTitle:@"注册" style:UIBarButtonItemStylePlain target:self action:@selector(registerAction:)];
     [registerItem setTitleTextAttributes:@{ NSForegroundColorAttributeName : [UIColor dp_blueColor] } forState:UIControlStateNormal];
