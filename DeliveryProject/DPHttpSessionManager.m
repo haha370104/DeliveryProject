@@ -55,6 +55,7 @@
                 failure(task, dictionary);
             } else {
                 [MBProgressHUD showErrorState:@"网络错误" inView:nil];
+                failure(task, nil);
             }
         } else {
             [MBProgressHUD showErrorState:@"未知错误" inView:nil];
@@ -82,6 +83,7 @@
                 failure(task, dictionary);
             } else {
                 [MBProgressHUD showErrorState:@"网络错误" inView:nil];
+                failure(task, dictionary);
             }
         } else {
             [MBProgressHUD showErrorState:@"未知错误" inView:nil];
