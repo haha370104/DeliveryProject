@@ -50,8 +50,8 @@
 
     [self.bottomLine mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self);
-        make.bottom.equalTo(self.rightTextField).with.offset(2);
-        make.height.equalTo(@(1));
+        make.bottom.equalTo(self.rightTextField).with.offset(1);
+        make.height.equalTo(@(0.5));
     }];
 }
 
@@ -71,6 +71,7 @@
 {
     if (!_rightTextField) {
         _rightTextField = [[UITextField alloc] init];
+        _rightTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
     }
     return _rightTextField;
 }
@@ -86,7 +87,7 @@
 
 @end
 
-@interface DPLeftTitleRightTextFieldTableViewCell ()
+@interface DPLeftTitleRightTextFieldTableViewCell () <UITextFieldDelegate>
 
 @property (nonatomic, strong) DPLeftTitleRightTextFieldTableViewCellInnerView *innerView;
 
@@ -105,6 +106,28 @@
     return self;
 }
 
+#pragma mark - lifecycle -
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)prepareForReuse
+{
+    self.innerView.leftLabel.text = @"";
+    self.innerView.rightTextField.text = @"";
+    self.innerView.rightTextField.placeholder = @"";
+}
+
+#pragma mark - UITextFieldDelegate -
+- (void)textDidChange:(NSNotification *)notification
+{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(leftTitleRightTextFieldChanged:stringInCell:)]) {
+        [self.delegate leftTitleRightTextFieldChanged:self stringInCell:self.innerView.rightTextField.text];
+    }
+}
+
 #pragma mark - private -
 - (void)setupConstraints
 {
@@ -118,6 +141,8 @@
 {
     if (!_innerView) {
         _innerView = [[DPLeftTitleRightTextFieldTableViewCellInnerView alloc] init];
+        _innerView.rightTextField.delegate = self;
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textDidChange:) name:UITextFieldTextDidChangeNotification object:self.innerView.rightTextField];
     }
     return _innerView;
 }

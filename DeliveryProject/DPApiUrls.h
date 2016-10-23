@@ -12,9 +12,9 @@
 
 #pragma mark - 用户相关 -
 
-#define kDPAPI_LOGIN_URL @"/api/user/login"
-#define kDPAPI_REGISTER_URL @"/api/user/signup"
 #define kDPAPI_GET_SMS_CODE_URL @"/api/user/getSMSCode"
+#define kDPAPI_REGISTER_URL @"/api/user/signup"
+#define kDPAPI_LOGIN_URL @"/api/user/login"
 #define kDPAPI_LOGOUT_URL @"/api/user/logout"
 #define kDPAPI_CHECK_LOGIN_URL @"/api/user/test"
 

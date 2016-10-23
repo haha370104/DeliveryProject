@@ -12,4 +12,10 @@
 
 + (instancetype)shareManager;
 
+
+- (void)getRequestByUrl:(NSString *)url params:(NSDictionary *)params success:( void (^) (NSURLSessionDataTask *task, id data) )success
+                failure:( void (^) (NSURLSessionDataTask *task, NSString *errorReason) )failure;
+- (void)postRequestByUrl:(NSString *)url params:(NSDictionary *)params success:( void (^) (NSURLSessionDataTask *task, id data) )success
+                 failure:( void (^) (NSURLSessionDataTask *task, NSString *errorReason) )failure;
+
 @end

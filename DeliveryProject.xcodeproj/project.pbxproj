@@ -15,6 +15,7 @@
 		75AA79DE1DBC8E030029A3F6 /* UIWindow+MainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AA79DD1DBC8E030029A3F6 /* UIWindow+MainWindow.m */; };
 		75AA79E11DBC8E670029A3F6 /* DPActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AA79E01DBC8E670029A3F6 /* DPActivityIndicatorView.m */; };
 		75AA79E41DBC90410029A3F6 /* DPApiUrls.h in Sources */ = {isa = PBXBuildFile; fileRef = 75AA79E31DBC90410029A3F6 /* DPApiUrls.h */; };
+		75AA79E71DBC9BA60029A3F6 /* DPUserApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AA79E61DBC9BA60029A3F6 /* DPUserApi.m */; };
 		75DE08F01DBB9A0A000F4208 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DE08EF1DBB9A0A000F4208 /* main.m */; };
 		75DE08F31DBB9A0A000F4208 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DE08F21DBB9A0A000F4208 /* AppDelegate.m */; };
 		75DE08F61DBB9A0A000F4208 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DE08F51DBB9A0A000F4208 /* ViewController.m */; };
@@ -61,6 +62,8 @@
 		75AA79DF1DBC8E670029A3F6 /* DPActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPActivityIndicatorView.h; sourceTree = "<group>"; };
 		75AA79E01DBC8E670029A3F6 /* DPActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPActivityIndicatorView.m; sourceTree = "<group>"; };
 		75AA79E31DBC90410029A3F6 /* DPApiUrls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPApiUrls.h; sourceTree = "<group>"; };
+		75AA79E51DBC9BA60029A3F6 /* DPUserApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPUserApi.h; sourceTree = "<group>"; };
+		75AA79E61DBC9BA60029A3F6 /* DPUserApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPUserApi.m; sourceTree = "<group>"; };
 		75DE08EB1DBB9A0A000F4208 /* DeliveryProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeliveryProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75DE08EF1DBB9A0A000F4208 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		75DE08F11DBB9A0A000F4208 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -155,6 +158,8 @@
 				75AA79D31DBC54660029A3F6 /* DPHttpSessionManager.h */,
 				75AA79D41DBC54660029A3F6 /* DPHttpSessionManager.m */,
 				75AA79E31DBC90410029A3F6 /* DPApiUrls.h */,
+				75AA79E51DBC9BA60029A3F6 /* DPUserApi.h */,
+				75AA79E61DBC9BA60029A3F6 /* DPUserApi.m */,
 			);
 			name = APIs;
 			sourceTree = "<group>";
@@ -162,7 +167,6 @@
 		756C859D1DBBA3DD0063B81F /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				756C859E1DBBA4980063B81F /* Cell */,
 				756C859A1DBBA2550063B81F /* DPLoginController.h */,
 				756C859B1DBBA2550063B81F /* DPLoginController.m */,
 			);
@@ -181,6 +185,7 @@
 		75AA79E21DBC8EA80029A3F6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				756C859E1DBBA4980063B81F /* Cell */,
 				75AA79DF1DBC8E670029A3F6 /* DPActivityIndicatorView.h */,
 				75AA79E01DBC8E670029A3F6 /* DPActivityIndicatorView.m */,
 			);
@@ -468,6 +473,7 @@
 				756C859C1DBBA2550063B81F /* DPLoginController.m in Sources */,
 				75AA79D51DBC54660029A3F6 /* DPHttpSessionManager.m in Sources */,
 				75DE09271DBB9F9A000F4208 /* DPUserInfoViewController.m in Sources */,
+				75AA79E71DBC9BA60029A3F6 /* DPUserApi.m in Sources */,
 				75AA79E11DBC8E670029A3F6 /* DPActivityIndicatorView.m in Sources */,
 				75DE08F61DBB9A0A000F4208 /* ViewController.m in Sources */,
 				75DE08F31DBB9A0A000F4208 /* AppDelegate.m in Sources */,

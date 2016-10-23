@@ -8,15 +8,20 @@
 
 #import "DPLoginController.h"
 #import "DPLeftTitleRightTextFieldTableViewCell.h"
+#import "DPUserApi.h"
 
 #import "UIColor+DPTheme.h"
 #import "UIFont+DPTheme.h"
+#import "MBProgressHUD+DPProgressHUD.h"
 
 #import <Masonry/Masonry.h>
 
-@interface DPLoginController ()<UITableViewDelegate, UITableViewDataSource>
+@interface DPLoginController ()<UITableViewDelegate, UITableViewDataSource, DPLeftTitleRightTextFieldCellDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
+
+@property (nonatomic, strong) NSString *phoneNum;
+@property (nonatomic, strong) NSString *password;
 
 @end
 
@@ -78,12 +83,33 @@
 
 - (void)loginButtonClick:(UIButton *)sender
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    if (!self.phoneNum.length || !self.password.length) {
+        [MBProgressHUD showErrorState:@"请填入手机号和密码" inView:nil];
+        return;
+    }
+
+    [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
+
+    [DPUserApi loginWithphoneNum:self.phoneNum password:self.password complete:^(NSDictionary *response) {
+        [MBProgressHUD showSuccessState:@"登陆成功" inView:nil];
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
 }
 
 - (void)forgetPwdAction:(UIButton *)sender
 {
 
+}
+
+#pragma mark - DPLeftTitleRightTextFieldCellDelegate -
+
+- (void)leftTitleRightTextFieldChanged:(DPLeftTitleRightTextFieldTableViewCell *)cell stringInCell:(NSString *)stringInCell
+{
+    if (cell.indexPath.row == 0) {
+        self.phoneNum = stringInCell;
+    } else {
+        self.password = stringInCell;
+    }
 }
 
 #pragma mark - UITableViewDelegate -
@@ -152,11 +178,13 @@
     if (indexPath.row == 0) {
         cell.innerView.leftLabel.text = @"手机号";
         cell.innerView.rightTextField.placeholder = @"请输入用户手机号";
+        cell.innerView.rightTextField.keyboardType = UIKeyboardTypePhonePad;
     } else {
         cell.innerView.leftLabel.text = @"密码";
         cell.innerView.rightTextField.placeholder = @"请输入密码";
         cell.innerView.rightTextField.secureTextEntry = YES;
     }
+    cell.delegate = self;
     cell.indexPath = indexPath;
     return cell;
 }

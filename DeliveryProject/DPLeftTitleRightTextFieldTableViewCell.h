@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class DPLeftTitleRightTextFieldTableViewCell;
+@protocol DPLeftTitleRightTextFieldCellDelegate <NSObject>
+
+- (void)leftTitleRightTextFieldChanged:(DPLeftTitleRightTextFieldTableViewCell *)cell stringInCell:(NSString *)stringInCell;
+
+@end
+
 @interface DPLeftTitleRightTextFieldTableViewCellInnerView : UIView
 
 @property (nonatomic, strong, readonly) UILabel *leftLabel;
@@ -19,5 +26,7 @@
 
 @property (nonatomic, strong, readonly) DPLeftTitleRightTextFieldTableViewCellInnerView *innerView;
 @property (nonatomic, strong) NSIndexPath *indexPath;
+
+@property (nonatomic, weak) id<DPLeftTitleRightTextFieldCellDelegate> delegate;
 
 @end
