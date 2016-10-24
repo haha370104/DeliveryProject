@@ -113,16 +113,16 @@
 		75AA7A221DBE05520029A3F6 /* DPShowOrderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPShowOrderController.m; sourceTree = "<group>"; };
 		75AA7A241DBE0DF20029A3F6 /* DPShowOrderQRImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPShowOrderQRImageController.h; sourceTree = "<group>"; };
 		75AA7A251DBE0DF20029A3F6 /* DPShowOrderQRImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPShowOrderQRImageController.m; sourceTree = "<group>"; };
-		75DE08EB1DBB9A0A000F4208 /* DeliveryProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeliveryProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		75DE08EB1DBB9A0A000F4208 /* antExpress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = antExpress.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75DE08EF1DBB9A0A000F4208 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		75DE08F11DBB9A0A000F4208 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		75DE08F21DBB9A0A000F4208 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		75DE08FA1DBB9A0A000F4208 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75DE08FF1DBB9A0A000F4208 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		75DE09041DBB9A0A000F4208 /* DeliveryProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeliveryProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		75DE09041DBB9A0A000F4208 /* antExpress.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = antExpress.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75DE09081DBB9A0A000F4208 /* DeliveryProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeliveryProjectTests.m; sourceTree = "<group>"; };
 		75DE090A1DBB9A0A000F4208 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		75DE090F1DBB9A0A000F4208 /* DeliveryProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeliveryProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		75DE090F1DBB9A0A000F4208 /* antExpress.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = antExpress.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75DE09131DBB9A0A000F4208 /* DeliveryProjectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeliveryProjectUITests.m; sourceTree = "<group>"; };
 		75DE09151DBB9A0A000F4208 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75DE09211DBB9D0E000F4208 /* DPTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPTabBarController.h; sourceTree = "<group>"; };
@@ -290,7 +290,7 @@
 		75DE08E21DBB9A0A000F4208 = {
 			isa = PBXGroup;
 			children = (
-				75DE08ED1DBB9A0A000F4208 /* DeliveryProject */,
+				75DE08ED1DBB9A0A000F4208 /* antExpress */,
 				75DE09071DBB9A0A000F4208 /* DeliveryProjectTests */,
 				75DE09121DBB9A0A000F4208 /* DeliveryProjectUITests */,
 				75DE08EC1DBB9A0A000F4208 /* Products */,
@@ -302,14 +302,14 @@
 		75DE08EC1DBB9A0A000F4208 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				75DE08EB1DBB9A0A000F4208 /* DeliveryProject.app */,
-				75DE09041DBB9A0A000F4208 /* DeliveryProjectTests.xctest */,
-				75DE090F1DBB9A0A000F4208 /* DeliveryProjectUITests.xctest */,
+				75DE08EB1DBB9A0A000F4208 /* antExpress.app */,
+				75DE09041DBB9A0A000F4208 /* antExpress.xctest */,
+				75DE090F1DBB9A0A000F4208 /* antExpress.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		75DE08ED1DBB9A0A000F4208 /* DeliveryProject */ = {
+		75DE08ED1DBB9A0A000F4208 /* antExpress */ = {
 			isa = PBXGroup;
 			children = (
 				75AA79E21DBC8EA80029A3F6 /* View */,
@@ -322,6 +322,7 @@
 				75DE08FF1DBB9A0A000F4208 /* Info.plist */,
 				75DE08EE1DBB9A0A000F4208 /* Supporting Files */,
 			);
+			name = antExpress;
 			path = DeliveryProject;
 			sourceTree = "<group>";
 		};
@@ -387,9 +388,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		75DE08EA1DBB9A0A000F4208 /* DeliveryProject */ = {
+		75DE08EA1DBB9A0A000F4208 /* antExpress */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 75DE09181DBB9A0A000F4208 /* Build configuration list for PBXNativeTarget "DeliveryProject" */;
+			buildConfigurationList = 75DE09181DBB9A0A000F4208 /* Build configuration list for PBXNativeTarget "antExpress" */;
 			buildPhases = (
 				CDFFBCB020B9CD7C2D2243CF /* [CP] Check Pods Manifest.lock */,
 				75DE08E71DBB9A0A000F4208 /* Sources */,
@@ -402,14 +403,14 @@
 			);
 			dependencies = (
 			);
-			name = DeliveryProject;
+			name = antExpress;
 			productName = DeliveryProject;
-			productReference = 75DE08EB1DBB9A0A000F4208 /* DeliveryProject.app */;
+			productReference = 75DE08EB1DBB9A0A000F4208 /* antExpress.app */;
 			productType = "com.apple.product-type.application";
 		};
-		75DE09031DBB9A0A000F4208 /* DeliveryProjectTests */ = {
+		75DE09031DBB9A0A000F4208 /* antExpressTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 75DE091B1DBB9A0A000F4208 /* Build configuration list for PBXNativeTarget "DeliveryProjectTests" */;
+			buildConfigurationList = 75DE091B1DBB9A0A000F4208 /* Build configuration list for PBXNativeTarget "antExpressTests" */;
 			buildPhases = (
 				75DE09001DBB9A0A000F4208 /* Sources */,
 				75DE09011DBB9A0A000F4208 /* Frameworks */,
@@ -420,14 +421,14 @@
 			dependencies = (
 				75DE09061DBB9A0A000F4208 /* PBXTargetDependency */,
 			);
-			name = DeliveryProjectTests;
+			name = antExpressTests;
 			productName = DeliveryProjectTests;
-			productReference = 75DE09041DBB9A0A000F4208 /* DeliveryProjectTests.xctest */;
+			productReference = 75DE09041DBB9A0A000F4208 /* antExpress.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		75DE090E1DBB9A0A000F4208 /* DeliveryProjectUITests */ = {
+		75DE090E1DBB9A0A000F4208 /* antExpressUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 75DE091E1DBB9A0A000F4208 /* Build configuration list for PBXNativeTarget "DeliveryProjectUITests" */;
+			buildConfigurationList = 75DE091E1DBB9A0A000F4208 /* Build configuration list for PBXNativeTarget "antExpressUITests" */;
 			buildPhases = (
 				75DE090B1DBB9A0A000F4208 /* Sources */,
 				75DE090C1DBB9A0A000F4208 /* Frameworks */,
@@ -438,9 +439,9 @@
 			dependencies = (
 				75DE09111DBB9A0A000F4208 /* PBXTargetDependency */,
 			);
-			name = DeliveryProjectUITests;
+			name = antExpressUITests;
 			productName = DeliveryProjectUITests;
-			productReference = 75DE090F1DBB9A0A000F4208 /* DeliveryProjectUITests.xctest */;
+			productReference = 75DE090F1DBB9A0A000F4208 /* antExpress.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -454,7 +455,7 @@
 				TargetAttributes = {
 					75DE08EA1DBB9A0A000F4208 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = LE7UV7A4JD;
+						DevelopmentTeam = 74UX6D4SCA;
 						ProvisioningStyle = Automatic;
 					};
 					75DE09031DBB9A0A000F4208 = {
@@ -471,7 +472,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 75DE08E61DBB9A0A000F4208 /* Build configuration list for PBXProject "DeliveryProject" */;
+			buildConfigurationList = 75DE08E61DBB9A0A000F4208 /* Build configuration list for PBXProject "antExpress" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -484,9 +485,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				75DE08EA1DBB9A0A000F4208 /* DeliveryProject */,
-				75DE09031DBB9A0A000F4208 /* DeliveryProjectTests */,
-				75DE090E1DBB9A0A000F4208 /* DeliveryProjectUITests */,
+				75DE08EA1DBB9A0A000F4208 /* antExpress */,
+				75DE09031DBB9A0A000F4208 /* antExpressTests */,
+				75DE090E1DBB9A0A000F4208 /* antExpressUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -624,12 +625,12 @@
 /* Begin PBXTargetDependency section */
 		75DE09061DBB9A0A000F4208 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 75DE08EA1DBB9A0A000F4208 /* DeliveryProject */;
+			target = 75DE08EA1DBB9A0A000F4208 /* antExpress */;
 			targetProxy = 75DE09051DBB9A0A000F4208 /* PBXContainerItemProxy */;
 		};
 		75DE09111DBB9A0A000F4208 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 75DE08EA1DBB9A0A000F4208 /* DeliveryProject */;
+			target = 75DE08EA1DBB9A0A000F4208 /* antExpress */;
 			targetProxy = 75DE09101DBB9A0A000F4208 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -656,7 +657,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 向宇 罗 (9QJYEH77N7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 向宇 罗 (9QJYEH77N7)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -703,7 +705,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 向宇 罗 (9QJYEH77N7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 向宇 罗 (9QJYEH77N7)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -728,12 +731,15 @@
 			baseConfigurationReference = 8508A6DB4AA9652A14EB4BCE /* Pods-DeliveryProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = LE7UV7A4JD;
 				INFOPLIST_FILE = DeliveryProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.tongji.DeliveryProject;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.baixing.DeliveryProject;
+				PRODUCT_NAME = antExpress;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -742,12 +748,15 @@
 			baseConfigurationReference = ABFD48909C24B0E63428EA77 /* Pods-DeliveryProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = LE7UV7A4JD;
 				INFOPLIST_FILE = DeliveryProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.tongji.DeliveryProject;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.baixing.DeliveryProject;
+				PRODUCT_NAME = antExpress;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -755,13 +764,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: luoxiangyu@baixing.com (S2Z97B97M4)";
 				DEVELOPMENT_TEAM = LE7UV7A4JD;
 				INFOPLIST_FILE = DeliveryProjectTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.tongji.DeliveryProjectTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeliveryProject.app/DeliveryProject";
+				PRODUCT_NAME = antExpress;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/antExpress.app/antExpress";
 			};
 			name = Debug;
 		};
@@ -769,25 +779,27 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: luoxiangyu@baixing.com (S2Z97B97M4)";
 				DEVELOPMENT_TEAM = LE7UV7A4JD;
 				INFOPLIST_FILE = DeliveryProjectTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.tongji.DeliveryProjectTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeliveryProject.app/DeliveryProject";
+				PRODUCT_NAME = antExpress;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/antExpress.app/antExpress";
 			};
 			name = Release;
 		};
 		75DE091F1DBB9A0A000F4208 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: luoxiangyu@baixing.com (S2Z97B97M4)";
 				DEVELOPMENT_TEAM = LE7UV7A4JD;
 				INFOPLIST_FILE = DeliveryProjectUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.tongji.DeliveryProjectUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = antExpress;
 				TEST_TARGET_NAME = DeliveryProject;
 			};
 			name = Debug;
@@ -795,12 +807,13 @@
 		75DE09201DBB9A0A000F4208 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: luoxiangyu@baixing.com (S2Z97B97M4)";
 				DEVELOPMENT_TEAM = LE7UV7A4JD;
 				INFOPLIST_FILE = DeliveryProjectUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.tongji.DeliveryProjectUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = antExpress;
 				TEST_TARGET_NAME = DeliveryProject;
 			};
 			name = Release;
@@ -808,7 +821,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		75DE08E61DBB9A0A000F4208 /* Build configuration list for PBXProject "DeliveryProject" */ = {
+		75DE08E61DBB9A0A000F4208 /* Build configuration list for PBXProject "antExpress" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				75DE09161DBB9A0A000F4208 /* Debug */,
@@ -817,7 +830,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		75DE09181DBB9A0A000F4208 /* Build configuration list for PBXNativeTarget "DeliveryProject" */ = {
+		75DE09181DBB9A0A000F4208 /* Build configuration list for PBXNativeTarget "antExpress" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				75DE09191DBB9A0A000F4208 /* Debug */,
@@ -826,7 +839,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		75DE091B1DBB9A0A000F4208 /* Build configuration list for PBXNativeTarget "DeliveryProjectTests" */ = {
+		75DE091B1DBB9A0A000F4208 /* Build configuration list for PBXNativeTarget "antExpressTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				75DE091C1DBB9A0A000F4208 /* Debug */,
@@ -835,7 +848,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		75DE091E1DBB9A0A000F4208 /* Build configuration list for PBXNativeTarget "DeliveryProjectUITests" */ = {
+		75DE091E1DBB9A0A000F4208 /* Build configuration list for PBXNativeTarget "antExpressUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				75DE091F1DBB9A0A000F4208 /* Debug */,
