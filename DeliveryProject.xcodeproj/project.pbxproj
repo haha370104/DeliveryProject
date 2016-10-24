@@ -454,7 +454,6 @@
 				TargetAttributes = {
 					75DE08EA1DBB9A0A000F4208 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = LE7UV7A4JD;
 						ProvisioningStyle = Automatic;
 					};
 					75DE09031DBB9A0A000F4208 = {
@@ -728,6 +727,7 @@
 			baseConfigurationReference = 8508A6DB4AA9652A14EB4BCE /* Pods-DeliveryProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = LE7UV7A4JD;
 				INFOPLIST_FILE = DeliveryProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -742,6 +742,7 @@
 			baseConfigurationReference = ABFD48909C24B0E63428EA77 /* Pods-DeliveryProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = LE7UV7A4JD;
 				INFOPLIST_FILE = DeliveryProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
