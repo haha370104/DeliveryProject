@@ -8,11 +8,16 @@
 
 #import "DPShowOrderQRImageController.h"
 
+#import "UIFont+DPTheme.h"
+#import "UIColor+DPTheme.h"
+#import "NSObject+DPTypeCheck.h"
+
 #import <CoreImage/CoreImage.h>
 #import <Masonry/Masonry.h>
 
 @interface DPShowOrderQRImageController ()
 
+@property (nonatomic, strong) UILabel *orderIdLabel;
 @property (nonatomic, strong) UIImageView *qrCodeImage;
 
 @property (nonatomic, strong) NSString *qrJsonString;
@@ -31,6 +36,8 @@
         NSString *json = [self dictionaryToJson:dictionary];
         self.qrJsonString = json;
         [self.view addSubview:self.qrCodeImage];
+        [self.view addSubview:self.orderIdLabel];
+        self.orderIdLabel.text = [dictionary stringValueForKey:@"id"];
         [self setupConstraints];
     }
     return self;
@@ -47,6 +54,11 @@
 
 - (void)setupConstraints
 {
+    [self.orderIdLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.top.equalTo(self.view).with.offset(90);
+    }];
+
     [self.qrCodeImage mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.centerY.equalTo(self.view);
         make.width.height.equalTo(self.view.mas_height).multipliedBy(0.4f);
@@ -110,6 +122,16 @@
         _qrCodeImage = [[UIImageView alloc] init];
     }
     return _qrCodeImage;
+}
+
+- (UILabel *)orderIdLabel
+{
+    if (!_orderIdLabel) {
+        _orderIdLabel = [[UILabel alloc] init];
+        _orderIdLabel.font = [UIFont dp_fontOfSize:14];
+        _orderIdLabel.textColor = [UIColor dp_grayColor];
+    }
+    return _orderIdLabel;
 }
 
 @end
