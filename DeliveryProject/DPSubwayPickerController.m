@@ -105,7 +105,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [self.searchController setHidesNavigationBarDuringPresentation:YES];
     if (self.delegate) {
         NSString *stationName;
         if (self.filterStations.count) {
@@ -116,6 +115,7 @@
         }
         [self.delegate DPSubwayPickerController:self didSelectedSubwayStation:stationName];
     }
+    self.searchController.active = NO;
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -148,7 +148,8 @@
     if (!_searchController) {
         _searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
         _searchController.searchResultsUpdater = self;
-        _searchController.dimsBackgroundDuringPresentation = YES;
+        _searchController.dimsBackgroundDuringPresentation = NO;
+        _searchController.searchBar.frame = CGRectMake(self.searchController.searchBar.frame.origin.x, self.searchController.searchBar.frame.origin.y, self.searchController.searchBar.frame.size.width, 44.0);
         _searchController.searchBar.placeholder = @"请输入地铁站点";
         [_searchController.searchBar sizeToFit];
         _searchController.searchBar.backgroundColor = [UIColor dp_aLittleGrayColor];
