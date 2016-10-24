@@ -32,6 +32,7 @@
 		75AA7A1D1DBDF9A40029A3F6 /* DPOrderApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AA7A1C1DBDF9A40029A3F6 /* DPOrderApi.m */; };
 		75AA7A201DBDFD850029A3F6 /* DPShowOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AA7A1F1DBDFD850029A3F6 /* DPShowOrderTableViewCell.m */; };
 		75AA7A231DBE05520029A3F6 /* DPShowOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AA7A221DBE05520029A3F6 /* DPShowOrderController.m */; };
+		75AA7A261DBE0DF20029A3F6 /* DPShowOrderQRImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AA7A251DBE0DF20029A3F6 /* DPShowOrderQRImageController.m */; };
 		75DE08F01DBB9A0A000F4208 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DE08EF1DBB9A0A000F4208 /* main.m */; };
 		75DE08F31DBB9A0A000F4208 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DE08F21DBB9A0A000F4208 /* AppDelegate.m */; };
 		75DE08FB1DBB9A0A000F4208 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75DE08FA1DBB9A0A000F4208 /* Assets.xcassets */; };
@@ -110,6 +111,8 @@
 		75AA7A1F1DBDFD850029A3F6 /* DPShowOrderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPShowOrderTableViewCell.m; sourceTree = "<group>"; };
 		75AA7A211DBE05520029A3F6 /* DPShowOrderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPShowOrderController.h; sourceTree = "<group>"; };
 		75AA7A221DBE05520029A3F6 /* DPShowOrderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPShowOrderController.m; sourceTree = "<group>"; };
+		75AA7A241DBE0DF20029A3F6 /* DPShowOrderQRImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPShowOrderQRImageController.h; sourceTree = "<group>"; };
+		75AA7A251DBE0DF20029A3F6 /* DPShowOrderQRImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPShowOrderQRImageController.m; sourceTree = "<group>"; };
 		75DE08EB1DBB9A0A000F4208 /* DeliveryProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeliveryProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75DE08EF1DBB9A0A000F4208 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		75DE08F11DBB9A0A000F4208 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -260,6 +263,8 @@
 				75AA7A161DBDE2630029A3F6 /* DPSearchPackageResultController.m */,
 				75AA7A211DBE05520029A3F6 /* DPShowOrderController.h */,
 				75AA7A221DBE05520029A3F6 /* DPShowOrderController.m */,
+				75AA7A241DBE0DF20029A3F6 /* DPShowOrderQRImageController.h */,
+				75AA7A251DBE0DF20029A3F6 /* DPShowOrderQRImageController.m */,
 			);
 			name = Package;
 			sourceTree = "<group>";
@@ -572,6 +577,7 @@
 				75AA79F61DBCC8E50029A3F6 /* DPUserInfoController.m in Sources */,
 				75AA79E11DBC8E670029A3F6 /* DPActivityIndicatorView.m in Sources */,
 				75DE08F31DBB9A0A000F4208 /* AppDelegate.m in Sources */,
+				75AA7A261DBE0DF20029A3F6 /* DPShowOrderQRImageController.m in Sources */,
 				75AA7A111DBDDB900029A3F6 /* DPPackage.m in Sources */,
 				75AA79DE1DBC8E030029A3F6 /* UIWindow+MainWindow.m in Sources */,
 				75AA79EA1DBCBAD60029A3F6 /* NSObject+DPTypeCheck.m in Sources */,

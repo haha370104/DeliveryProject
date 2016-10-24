@@ -189,7 +189,7 @@
 
         NSString *weightString = [NSString stringWithFormat:@"%@%@",[parcel stringValueForKey:@"weight"],[parcel stringValueForKey:@"unit"]];
 
-        DPOrder *order = [[DPOrder alloc] initWithId:[dic stringValueForKey:@"_id"] startStation:[dic stringValueForKey:@"start"] endStation:[dic stringValueForKey:@"end"] packageWeight:weightString packageContent:[parcel stringValueForKey:@"content"] createTime:[dic stringValueForKey:@"createdAt"] updateTime:[dic stringValueForKey:@"updatedAt"] orderState:DPOrderConfirm];
+        DPOrder *order = [[DPOrder alloc] initWithId:[dic stringValueForKey:@"_id"] startStation:[dic stringValueForKey:@"start"] endStation:[dic stringValueForKey:@"end"] packageWeight:weightString packageContent:[parcel stringValueForKey:@"content"] createTime:[dic stringValueForKey:@"createdAt"] updateTime:[dic stringValueForKey:@"updatedAt"] orderState:DPOrderConfirm token:[dic stringValueForKey:@"token"]];
 
         [orderArray dp_addSafeObject:order];
     }

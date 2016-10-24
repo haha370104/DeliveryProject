@@ -9,6 +9,7 @@
 #import "DPShowOrderController.h"
 #import "DPShowOrderTableViewCell.h"
 #import "DPPackageApi.h"
+#import "DPShowOrderQRImageController.h"
 
 #import "MBProgressHUD+DPProgressHUD.h"
 #import "NSObject+DPTypeCheck.h"
@@ -84,7 +85,8 @@
 - (void)DPShowOrderTableViewCell:(DPShowOrderTableViewCell *)cell indexPath:(NSIndexPath *)indexPath
 {
     DPOrder *order = [self.packageArray dp_safeObjectAtIndex:indexPath.row];
-
+    NSDictionary *qrCodeJson = @{@"id":order.orderId, @"token":order.token};
+    [self.navigationController pushViewController:[[DPShowOrderQRImageController alloc] initWithCodeJsonNSDictionary:qrCodeJson] animated:YES];
 }
 
 #pragma mark - getter && setter -
