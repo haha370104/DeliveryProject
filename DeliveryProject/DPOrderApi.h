@@ -10,4 +10,10 @@
 
 @interface DPOrderApi : NSObject
 
++ (void)fetchConfirmOrderWithComplete:( void (^) (NSDictionary *response, BOOL success) )complete;
+
++ (void)fetchPassingOrderWithComplete:( void (^) (NSDictionary *response, BOOL success) )complete;
+
++ (void)fetchFinishedOrderWithComplete:( void (^) (NSDictionary *response, BOOL success) )complete;
+
 @end

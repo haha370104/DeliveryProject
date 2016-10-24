@@ -8,6 +8,8 @@
 
 #import "DPSearchPackageController.h"
 #import "DPSubwayPickerController.h"
+#import "DPPackage.h"
+#import "DPSearchPackageResultController.h"
 
 #import "DPPackageApi.h"
 
@@ -69,9 +71,22 @@
             NSArray *resultArray = [response arrayValueForKey:@"result"];
             if (!resultArray.count) {
                 [MBProgressHUD showErrorState:@"此线路无可用订单" inView:nil];
-            } else {
-                
+                return;
             }
+            NSMutableArray<DPPackage *> *packageArray = [[NSMutableArray alloc] init];
+            for (NSDictionary *dic in resultArray) {
+                NSDictionary *parcel = [dic dictionaryValueForKey:@"parcel"];
+
+                NSString *weightString = [NSString stringWithFormat:@"%@%@",[parcel stringValueForKey:@"weight"],[parcel stringValueForKey:@"unit"]];
+
+                DPPackage *package = [[DPPackage alloc] initWithId:[dic stringValueForKey:@"_id"] startStation:[dic stringValueForKey:@"start"] endStation:[dic stringValueForKey:@"end"] packageWeight:weightString packageContent:[parcel stringValueForKey:@"content"] createTime:[dic stringValueForKey:@"createdAt"]];
+
+                [packageArray dp_addSafeObject:package];
+            }
+
+            DPSearchPackageResultController *resultController = [[DPSearchPackageResultController alloc] initWithPackageArray:packageArray];
+            resultController.navigationItem.title = [NSString stringWithFormat:@"%@-%@", self.startStation, self.endStation];
+            [self.navigationController pushViewController:resultController animated:YES];
         } else {
             [MBProgressHUD showErrorState:[response stringValueForKey:@"error"] inView:nil];
         }

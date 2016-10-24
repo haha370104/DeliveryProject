@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DPPackage.h"
 
-@interface DPSearchPackageResultController : UITableViewController
+@interface DPSearchPackageResultController : UIViewController
+
+@property (nonatomic, strong, readonly) UITableView *tableView;
+
+- (instancetype)initWithPackageArray:(NSArray<DPPackage *> *)packageArray;
 
 @end

@@ -9,6 +9,7 @@
 #import "DPUserInfoController.h"
 #import "DPUserManager.h"
 #import "DPUserApi.h"
+#import "DPOrderApi.h"
 #import "DPLoginController.h"
 
 #import "UIColor+DPTheme.h"
@@ -64,6 +65,21 @@
 }
 
 #pragma mark - action -
+
+- (void)checkConfirmOrder:(UIButton *)sender
+{
+
+}
+
+- (void)checkPassingOrder:(UIButton *)sender
+{
+
+}
+
+- (void)checkFinishedOrder:(UIButton *)sender
+{
+
+}
 
 - (void)logout:(UIButton *)sender
 {
@@ -150,6 +166,8 @@
         [_confirmPackage setTitleColor:[UIColor dp_grayColor] forState:UIControlStateNormal];
         [_confirmPackage setTitleEdgeInsets:UIEdgeInsetsMake(130, 0, 0, 0)];
         _confirmPackage.titleLabel.font = [UIFont dp_fontOfSize:14];
+
+        [_confirmPackage addTarget:self action:@selector(checkConfirmOrder:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _confirmPackage;
 }
@@ -163,6 +181,8 @@
         [_passingPackage setTitleColor:[UIColor dp_grayColor] forState:UIControlStateNormal];
         [_passingPackage setTitleEdgeInsets:UIEdgeInsetsMake(130, 0, 0, 0)];
         _passingPackage.titleLabel.font = [UIFont dp_fontOfSize:14];
+
+        [_passingPackage addTarget:self action:@selector(checkPassingOrder:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _passingPackage;
 }
@@ -176,6 +196,8 @@
         [_historyPackage setTitleColor:[UIColor dp_grayColor] forState:UIControlStateNormal];
         [_historyPackage setTitleEdgeInsets:UIEdgeInsetsMake(130, 0, 0, 0)];
         _historyPackage.titleLabel.font = [UIFont dp_fontOfSize:14];
+
+        [_historyPackage addTarget:self action:@selector(checkFinishedOrder:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _historyPackage;
 }

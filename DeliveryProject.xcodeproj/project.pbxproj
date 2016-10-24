@@ -26,6 +26,11 @@
 		75AA7A051DBCEE8D0029A3F6 /* DPUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AA7A041DBCEE8D0029A3F6 /* DPUserManager.m */; };
 		75AA7A0B1DBD9D830029A3F6 /* DPSubwayPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AA7A0A1DBD9D830029A3F6 /* DPSubwayPickerController.m */; };
 		75AA7A0E1DBDD20B0029A3F6 /* DPPackageApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AA7A0D1DBDD20B0029A3F6 /* DPPackageApi.m */; };
+		75AA7A111DBDDB900029A3F6 /* DPPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AA7A101DBDDB900029A3F6 /* DPPackage.m */; };
+		75AA7A141DBDE1A60029A3F6 /* DPOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AA7A131DBDE1A60029A3F6 /* DPOrder.m */; };
+		75AA7A171DBDE2630029A3F6 /* DPSearchPackageResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AA7A161DBDE2630029A3F6 /* DPSearchPackageResultController.m */; };
+		75AA7A1A1DBDE2A40029A3F6 /* DPShowPackageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AA7A191DBDE2A40029A3F6 /* DPShowPackageTableViewCell.m */; };
+		75AA7A1D1DBDF9A40029A3F6 /* DPOrderApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AA7A1C1DBDF9A40029A3F6 /* DPOrderApi.m */; };
 		75DE08F01DBB9A0A000F4208 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DE08EF1DBB9A0A000F4208 /* main.m */; };
 		75DE08F31DBB9A0A000F4208 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DE08F21DBB9A0A000F4208 /* AppDelegate.m */; };
 		75DE08FB1DBB9A0A000F4208 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75DE08FA1DBB9A0A000F4208 /* Assets.xcassets */; };
@@ -92,6 +97,16 @@
 		75AA7A0A1DBD9D830029A3F6 /* DPSubwayPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPSubwayPickerController.m; sourceTree = "<group>"; };
 		75AA7A0C1DBDD20B0029A3F6 /* DPPackageApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPPackageApi.h; sourceTree = "<group>"; };
 		75AA7A0D1DBDD20B0029A3F6 /* DPPackageApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPPackageApi.m; sourceTree = "<group>"; };
+		75AA7A0F1DBDDB900029A3F6 /* DPPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPPackage.h; sourceTree = "<group>"; };
+		75AA7A101DBDDB900029A3F6 /* DPPackage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPPackage.m; sourceTree = "<group>"; };
+		75AA7A121DBDE1A60029A3F6 /* DPOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPOrder.h; sourceTree = "<group>"; };
+		75AA7A131DBDE1A60029A3F6 /* DPOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPOrder.m; sourceTree = "<group>"; };
+		75AA7A151DBDE2630029A3F6 /* DPSearchPackageResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPSearchPackageResultController.h; sourceTree = "<group>"; };
+		75AA7A161DBDE2630029A3F6 /* DPSearchPackageResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPSearchPackageResultController.m; sourceTree = "<group>"; };
+		75AA7A181DBDE2A40029A3F6 /* DPShowPackageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPShowPackageTableViewCell.h; sourceTree = "<group>"; };
+		75AA7A191DBDE2A40029A3F6 /* DPShowPackageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPShowPackageTableViewCell.m; sourceTree = "<group>"; };
+		75AA7A1B1DBDF9A40029A3F6 /* DPOrderApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPOrderApi.h; sourceTree = "<group>"; };
+		75AA7A1C1DBDF9A40029A3F6 /* DPOrderApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPOrderApi.m; sourceTree = "<group>"; };
 		75DE08EB1DBB9A0A000F4208 /* DeliveryProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeliveryProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75DE08EF1DBB9A0A000F4208 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		75DE08F11DBB9A0A000F4208 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -163,6 +178,10 @@
 			children = (
 				756C85951DBBA0720063B81F /* DPUser.h */,
 				756C85961DBBA0720063B81F /* DPUser.m */,
+				75AA7A0F1DBDDB900029A3F6 /* DPPackage.h */,
+				75AA7A101DBDDB900029A3F6 /* DPPackage.m */,
+				75AA7A121DBDE1A60029A3F6 /* DPOrder.h */,
+				75AA7A131DBDE1A60029A3F6 /* DPOrder.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -187,6 +206,8 @@
 				75AA79E61DBC9BA60029A3F6 /* DPUserApi.m */,
 				75AA7A0C1DBDD20B0029A3F6 /* DPPackageApi.h */,
 				75AA7A0D1DBDD20B0029A3F6 /* DPPackageApi.m */,
+				75AA7A1B1DBDF9A40029A3F6 /* DPOrderApi.h */,
+				75AA7A1C1DBDF9A40029A3F6 /* DPOrderApi.m */,
 			);
 			name = APIs;
 			sourceTree = "<group>";
@@ -209,6 +230,8 @@
 				756C85A01DBBA4D20063B81F /* DPLeftTitleRightTextFieldTableViewCell.m */,
 				75AA79FF1DBCD6970029A3F6 /* DPLeftTextFieldRightCustomButtonTableViewCell.h */,
 				75AA7A001DBCD6970029A3F6 /* DPLeftTextFieldRightCustomButtonTableViewCell.m */,
+				75AA7A181DBDE2A40029A3F6 /* DPShowPackageTableViewCell.h */,
+				75AA7A191DBDE2A40029A3F6 /* DPShowPackageTableViewCell.m */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -230,6 +253,8 @@
 				75AA79F91DBCC9CD0029A3F6 /* DPSearchPackageController.m */,
 				75AA79FB1DBCC9EE0029A3F6 /* DPShowPackageController.h */,
 				75AA79FC1DBCC9EE0029A3F6 /* DPShowPackageController.m */,
+				75AA7A151DBDE2630029A3F6 /* DPSearchPackageResultController.h */,
+				75AA7A161DBDE2630029A3F6 /* DPSearchPackageResultController.m */,
 			);
 			name = Package;
 			sourceTree = "<group>";
@@ -541,18 +566,23 @@
 				75AA79F61DBCC8E50029A3F6 /* DPUserInfoController.m in Sources */,
 				75AA79E11DBC8E670029A3F6 /* DPActivityIndicatorView.m in Sources */,
 				75DE08F31DBB9A0A000F4208 /* AppDelegate.m in Sources */,
+				75AA7A111DBDDB900029A3F6 /* DPPackage.m in Sources */,
 				75AA79DE1DBC8E030029A3F6 /* UIWindow+MainWindow.m in Sources */,
 				75AA79EA1DBCBAD60029A3F6 /* NSObject+DPTypeCheck.m in Sources */,
 				75DE09231DBB9D0E000F4208 /* DPTabBarController.m in Sources */,
 				756C85971DBBA0720063B81F /* DPUser.m in Sources */,
 				75AA79F01DBCC8B70029A3F6 /* DPRegisterController.m in Sources */,
+				75AA7A171DBDE2630029A3F6 /* DPSearchPackageResultController.m in Sources */,
+				75AA7A1D1DBDF9A40029A3F6 /* DPOrderApi.m in Sources */,
 				75AA79ED1DBCBB840029A3F6 /* NSObject+DPOperation.m in Sources */,
+				75AA7A1A1DBDE2A40029A3F6 /* DPShowPackageTableViewCell.m in Sources */,
 				75AA79FA1DBCC9CD0029A3F6 /* DPSearchPackageController.m in Sources */,
 				756C85A11DBBA4D20063B81F /* DPLeftTitleRightTextFieldTableViewCell.m in Sources */,
 				75DE08F01DBB9A0A000F4208 /* main.m in Sources */,
 				75AA79FD1DBCC9EE0029A3F6 /* DPShowPackageController.m in Sources */,
 				75FB1C4A1DBC478B00485854 /* UIFont+DPTheme.m in Sources */,
 				75AA79DB1DBC8D550029A3F6 /* MBProgressHUD+DPProgressHUD.m in Sources */,
+				75AA7A141DBDE1A60029A3F6 /* DPOrder.m in Sources */,
 				75AA7A0E1DBDD20B0029A3F6 /* DPPackageApi.m in Sources */,
 				75AA79E41DBC90410029A3F6 /* DPApiUrls.h in Sources */,
 				75AA7A0B1DBD9D830029A3F6 /* DPSubwayPickerController.m in Sources */,
