@@ -10,12 +10,15 @@
 #import "DPUserManager.h"
 #import "DPUserApi.h"
 #import "DPOrderApi.h"
+#import "DPOrder.h"
 #import "DPLoginController.h"
+#import "DPShowOrderController.h"
 
 #import "UIColor+DPTheme.h"
 #import "UIFont+DPTheme.h"
 #import "MBProgressHUD+DPProgressHUD.h"
 #import "NSObject+DPTypeCheck.h"
+#import "NSObject+DPOperation.h"
 
 #import <Masonry/Masonry.h>
 
@@ -68,17 +71,59 @@
 
 - (void)checkConfirmOrder:(UIButton *)sender
 {
-
+    [DPOrderApi fetchConfirmOrderWithComplete:^(NSDictionary *response, BOOL success) {
+        if (success) {
+            NSArray *resultArray = [response arrayValueForKey:@"result"];
+            if (!resultArray.count) {
+                [MBProgressHUD showErrorState:@"无已接订单" inView:nil];
+                return;
+            }
+            NSArray <DPOrder *> *orderArray = [self parseOrderWithArray:resultArray];
+            DPShowOrderController *resultController = [[DPShowOrderController alloc] initWithPackageArray:orderArray];
+            resultController.navigationItem.title = @"已接订单";
+            [self.navigationController pushViewController:resultController animated:YES];
+        } else {
+            [MBProgressHUD showErrorState:[response stringValueForKey:@"error"] inView:nil];
+        }
+    }];
 }
 
 - (void)checkPassingOrder:(UIButton *)sender
 {
-
+    [DPOrderApi fetchPassingOrderWithComplete:^(NSDictionary *response, BOOL success) {
+        if (success) {
+            NSArray *resultArray = [response arrayValueForKey:@"result"];
+            if (!resultArray.count) {
+                [MBProgressHUD showErrorState:@"无运送订单" inView:nil];
+                return;
+            }
+            NSArray <DPOrder *> *orderArray = [self parseOrderWithArray:resultArray];
+            DPShowOrderController *resultController = [[DPShowOrderController alloc] initWithPackageArray:orderArray];
+            resultController.navigationItem.title = @"运送订单";
+            [self.navigationController pushViewController:resultController animated:YES];
+        } else {
+            [MBProgressHUD showErrorState:[response stringValueForKey:@"error"] inView:nil];
+        }
+    }];
 }
 
 - (void)checkFinishedOrder:(UIButton *)sender
 {
-
+    [DPOrderApi fetchFinishedOrderWithComplete:^(NSDictionary *response, BOOL success) {
+        if (success) {
+            NSArray *resultArray = [response arrayValueForKey:@"result"];
+            if (!resultArray.count) {
+                [MBProgressHUD showErrorState:@"无历史订单" inView:nil];
+                return;
+            }
+            NSArray <DPOrder *> *orderArray = [self parseOrderWithArray:resultArray];
+            DPShowOrderController *resultController = [[DPShowOrderController alloc] initWithPackageArray:orderArray];
+            resultController.navigationItem.title = @"历史订单";
+            [self.navigationController pushViewController:resultController animated:YES];
+        } else {
+            [MBProgressHUD showErrorState:[response stringValueForKey:@"error"] inView:nil];
+        }
+    }];
 }
 
 - (void)logout:(UIButton *)sender
@@ -134,6 +179,21 @@
         make.centerY.equalTo(self.historyPackage);
         make.width.height.equalTo(self.confirmPackage);
     }];
+}
+
+- (NSArray <DPOrder *> *)parseOrderWithArray:(NSArray *)array
+{
+    NSMutableArray<DPOrder *> *orderArray = [[NSMutableArray alloc] init];
+    for (NSDictionary *dic in array) {
+        NSDictionary *parcel = [dic dictionaryValueForKey:@"parcel"];
+
+        NSString *weightString = [NSString stringWithFormat:@"%@%@",[parcel stringValueForKey:@"weight"],[parcel stringValueForKey:@"unit"]];
+
+        DPOrder *order = [[DPOrder alloc] initWithId:[dic stringValueForKey:@"_id"] startStation:[dic stringValueForKey:@"start"] endStation:[dic stringValueForKey:@"end"] packageWeight:weightString packageContent:[parcel stringValueForKey:@"content"] createTime:[dic stringValueForKey:@"createdAt"] updateTime:[dic stringValueForKey:@"updatedAt"] orderState:DPOrderConfirm];
+
+        [orderArray dp_addSafeObject:order];
+    }
+    return orderArray;
 }
 
 #pragma mark - getter && setter -
