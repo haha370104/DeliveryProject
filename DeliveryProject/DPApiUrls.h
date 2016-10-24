@@ -23,3 +23,9 @@
 #define kDPAPI_SEARCH_PACKAGE_URL @"/api/parcel/path/search"
 #define kDPAPI_CONFIRM_PACKAGE_URL @"/api/parcel/path/confirm"
 #define kDPAPI_GET_ORDER @"/api/order"
+
+#pragma mark - 订单相关 -
+
+#define kDPAPI_GET_CONFIRM_ORDER_URL @"/api/order/confirmed"
+#define kDPAPI_GET_PASSING_ORDER_URL @"/api/order/passing"
+#define kDPAPI_GET_FINISHED_ORDER_URL @"/api/order/finished"

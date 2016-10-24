@@ -28,4 +28,19 @@
     }];
 }
 
++ (void)confirmPackage:(NSString *)packageId complete:( void (^) (NSDictionary *response, BOOL success) )complete
+{
+    [[DPHttpSessionManager shareManager] getRequestByUrl:kDPAPI_CONFIRM_PACKAGE_URL params:@{@"id":packageId} success:^(NSURLSessionDataTask *task, id data) {
+
+        if (complete) {
+            complete(data, YES);
+        }
+    } failure:^(NSURLSessionDataTask *task, NSDictionary *error) {
+
+        if (complete) {
+            complete(error, NO);
+        }
+    }];
+}
+
 @end

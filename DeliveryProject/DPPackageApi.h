@@ -12,4 +12,6 @@
 
 + (void)searchPackageWithStartStation:(NSString *)startStation endStation:(NSString *)endStation complete:( void (^) (NSDictionary *response, BOOL success) )complete;
 
++ (void)confirmPackage:(NSString *)packageId complete:( void (^) (NSDictionary *response, BOOL success) )complete;
+
 @end
