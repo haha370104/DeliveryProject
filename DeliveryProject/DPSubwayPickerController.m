@@ -102,6 +102,23 @@
     return self.keysIndex;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self.searchController setHidesNavigationBarDuringPresentation:YES];
+    if (self.delegate) {
+        NSString *stationName;
+        if (self.filterStations.count) {
+            stationName = [self.filterStations objectAtIndex:indexPath.row];
+        } else {
+            NSString *key = [self.keysIndex objectAtIndex:indexPath.section];
+            stationName = [[self.subwayInfo arrayValueForKey:key] objectAtIndex:indexPath.row];
+        }
+        [self.delegate DPSubwayPickerController:self didSelectedSubwayStation:stationName];
+    }
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 #pragma mark - private -
 
 - (void)setupConstraints
