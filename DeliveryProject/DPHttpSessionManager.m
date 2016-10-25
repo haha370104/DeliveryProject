@@ -50,7 +50,10 @@
         [weadHud hide:YES];
         if (failure) {
             NSData* responseData = (NSData *)error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey];
-            NSDictionary *dictionary =[NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableLeaves error:nil];
+            NSDictionary *dictionary = nil;
+            if (responseData) {
+                dictionary = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableLeaves error:nil];
+            }
             if (dictionary) {
                 failure(task, dictionary);
             } else {
@@ -78,7 +81,10 @@
         [weadHud hide:YES];
         if (failure) {
             NSData* responseData = (NSData *)error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey];
-            NSDictionary *dictionary =[NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableLeaves error:nil];
+            NSDictionary *dictionary =nil;
+            if (responseData) {
+                dictionary = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableLeaves error:nil];
+            }
             if (dictionary) {
                 failure(task, dictionary);
             } else {
